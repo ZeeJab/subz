@@ -1,1 +1,4 @@
 <%= button_to 'Get Data', '/data' %>
+
+<%= render :partial => 'map', :locals => {:lat => 0, :long => 0, :zoom => 1 } %>
+<%= render :partial => 'pin', :collection => @vacations, :as => :vacation %>
