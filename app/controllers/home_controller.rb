@@ -15,14 +15,21 @@ class HomeController < ApplicationController
 
 			@entrance = Entrance.create(:name => @entrance, :lat => @lat, :long => @long, :line => @line)
 			redirect_to show_path
-
-		end
-
-		def get_data
-
 		end
 
 	end
+
+	def get_data
+	end
+
+	def search
+	    query = params[:query]
+	    if query.present?
+	      @entrance = Entrance.text_search(query)
+	    else
+	      @entrance = Entrance.all
+	    end
+  	end
 
 	
 end

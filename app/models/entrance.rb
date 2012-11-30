@@ -13,4 +13,8 @@
 
 class Entrance < ActiveRecord::Base
 	belongs_to :subway
+
+	def self.text_search(query) #this makes a class method that gets used in the controller
+  	self.where("name @@ :q or description @@ :q", :q => query)
+  end
 end
