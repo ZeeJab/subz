@@ -1,19 +1,16 @@
 # == Schema Information
 #
-# Table name: entrances
+# Table name: lines
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  lat        :decimal(, )
-#  long       :decimal(, )
-#  line       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Entrance < ActiveRecord::Base
-	belongs_to :subway
-	has_and_belongs_to_many :lines
+class Line < ActiveRecord::Base
+	has_and_belongs_to_many :entrances
+	# validates :uniqueness => true
 end
 
 
