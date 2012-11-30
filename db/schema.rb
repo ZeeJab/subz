@@ -11,29 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121130032003) do
-
-  create_table "entrances", :force => true do |t|
-    t.string   "name"
-    t.decimal  "lat"
-    t.decimal  "long"
-    t.string   "line"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "entrances_lines", :id => false, :force => true do |t|
-    t.integer "entrance_id"
-    t.integer "line_id"
-  end
-
-  create_table "lines", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20121129201908) do
 
   create_table "subways", :force => true do |t|
+    t.string   "name"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "line"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
