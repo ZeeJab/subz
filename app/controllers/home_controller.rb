@@ -1,37 +1,36 @@
 class HomeController < ApplicationController
 	def index
-		@entrance = Entrance.all
-	
+		@entrances = Subway.all
+
 	end
 
-	def data
-		info = HTTParty.get('http://data.cityofnewyork.us/api/views/drex-xx56/rows.json')
-		data = JSON(info.body)
+	def lines
+		@subways = Subway.where(:line => params[:commit])
 
-		data["data"].each do |d|
+	end
 
-			entrance = d[10]
-			lat = d[9][1]
-			long = d[9][2]
-			line = d[12].gsub(/.{3}Express/, '') 
+	def entrances
+	# Subway.delete_all
+ #    x = HTTParty.get('http://data.cityofnewyork.us/api/views/drex-xx56/rows.json')
+ #    y = JSON(x.body)
 
+ #    y["data"].each do |t|
+ #      lines_array = t.last.split('-')
+ #      lines_array.each do |f|
+ #        point = t[9][5]["point"]
+ #        s = Subway.create(:name=> t[10], :latitude => point[1], :longitude => point[0], :line => f)      
+ #      end
+ #    end
+    @entrances = Subway.all
 
-			entrance = Entrance.create(:name => entrance, :lat => lat, :long => long, :line => line)
-			
+	end
 
-			lines = line.split('-')
-
-			lines.each do |e|
-
-				line = Line.where(:name => e).first
-
-	        	if line.nil?
-	        		Line.create(:name => e)
-	        		line = Line.where(:name => e).first
-	        		line.entrances << entrance
-	        	else
-					line.entrances << entrance
-				end
-      		end	
-		end
+	def plot
+		@subways = Subway.where(:line => params[:commit])
+	end
+		
 end
+
+
+
+

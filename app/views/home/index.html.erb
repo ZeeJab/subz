@@ -1,17 +1,8 @@
-<%= button_to 'Get Data', '/data' %>
-
-
-<%= render :partial => 'map', :locals => {:lat => 40.721632, :long => -73.985538, :zoom => 10} %>
+<%= button_to 'Get Subway Data', '/entrances' %>
 
 
 
-<script>
 
-<% @entrance.each do |x| %>
-    add_marker(<%= x.lat %>, <%= x.long %>, '<%= x.name %>');
-  <% end %>
-	
-</script>
 
 
 
