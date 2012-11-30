@@ -28,6 +28,10 @@ class HomeController < ApplicationController
 	def plot
 		@subways = Subway.where(:line => params[:commit])
 	end
+
+	 def search
+    	@subways = Subway.text_search(params[:commit])
+  	end
 		
 end
 

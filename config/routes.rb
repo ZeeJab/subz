@@ -5,7 +5,7 @@ Subz::Application.routes.draw do
   post '/data' => 'home#data'
   match '/entrances' => 'home#entrances'
   post '/plot' => 'home#plot'
-
+  post '/search' => 'home#search'
 
 
   
