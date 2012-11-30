@@ -5,11 +5,6 @@ class HomeController < ApplicationController
 
 	end
 
-	def lines
-		@subways = Subway.where(:line => params[:commit])
-
-	end
-
 	def entrances
 	# Subway.delete_all
  #    x = HTTParty.get('http://data.cityofnewyork.us/api/views/drex-xx56/rows.json')
