@@ -5,11 +5,20 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{GOOGLEKEY}&sensor=false" %>
+  <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<header>
+  		<h1>subz</h1>
+  		<p>You're welcome New York</p>
+	</header>
 <%= yield %>
+
+<footer>
+    © 2012 subz :: All rights reserved ::
+    Made by Hand :: Zahra Jabini :: Aaron Fuchs :: [<span class="heart">&#x2665;</span>]
+</footer>
 
 </body>
 </html>

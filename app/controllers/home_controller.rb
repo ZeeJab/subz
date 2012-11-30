@@ -1,8 +1,7 @@
 class HomeController < ApplicationController
 	def index
 		@entrance = Entrance.all
-		@f = Entrance.where(:line => "F-G")
-		@a = Entrance.where(:line => "1-2-3" && '1')
+		
 	end
 
 	def data
@@ -17,7 +16,7 @@ class HomeController < ApplicationController
 			@line = d.last 
 
 			@entrance = Entrance.create(:name => @entrance, :lat => @lat, :long => @long, :line => @line)
-			redirect_to show_path
+			# redirect_to show_path
 		end
 
 	end
