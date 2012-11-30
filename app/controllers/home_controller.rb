@@ -15,6 +15,7 @@ class HomeController < ApplicationController
 			long = d[9][2]
 			line = d[12].gsub(/.{3}Express/, '') 
 
+
 			entrance = Entrance.create(:name => entrance, :lat => lat, :long => long, :line => line)
 			
 
@@ -33,7 +34,4 @@ class HomeController < ApplicationController
 				end
       		end	
 		end
-	end
 end
-
-
