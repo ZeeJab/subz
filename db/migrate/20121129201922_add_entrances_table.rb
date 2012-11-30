@@ -10,3 +10,4 @@ class AddEntrancesTable < ActiveRecord::Migration
   	end
   end
 end
+

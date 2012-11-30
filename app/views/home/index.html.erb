@@ -7,11 +7,15 @@
 
 <script>
 
-<% @a.each do |x| %>
+<% @entrance.each do |x| %>
     add_marker(<%= x.lat %>, <%= x.long %>, '<%= x.name %>');
   <% end %>
 	
 </script>
+
+
+
+
 
 
 
