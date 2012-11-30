@@ -30,6 +30,7 @@ class HomeController < ApplicationController
 			else
 				line.entrances << entrance
 			end
+		end
 		end	
 	end
 end

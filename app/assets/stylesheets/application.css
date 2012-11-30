@@ -55,7 +55,7 @@ footer {
 #map_canvas {
 	border: 10px solid #C0C0C0;
 	border-radius: 5px;
-	width: 1200px;
+	width: 1100px;
 	height: 500px;
-	margin: auto;
+  margin: auto;
 }
