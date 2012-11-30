@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
 	def index
+
 		@entrances = Subway.all
 
 	end
@@ -13,7 +14,6 @@ class HomeController < ApplicationController
 	# Subway.delete_all
  #    x = HTTParty.get('http://data.cityofnewyork.us/api/views/drex-xx56/rows.json')
  #    y = JSON(x.body)
-
  #    y["data"].each do |t|
  #      lines_array = t.last.split('-')
  #      lines_array.each do |f|
@@ -30,7 +30,6 @@ class HomeController < ApplicationController
 	end
 		
 end
-
 
 
 

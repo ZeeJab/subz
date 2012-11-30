@@ -7,6 +7,7 @@ Subz::Application.routes.draw do
   post '/plot' => 'home#plot'
 
 
+
   
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
