@@ -1,7 +1,26 @@
 <%= button_to 'Get Data', '/data' %>
 
 
-<%= render :partial => 'map', :locals => {:lat => 0, :long => 0, :zoom => 1 } %>
-<%#= render :partial => 'pin', :collection => @entrance, :as => :vacation %>
+<%= render :partial => 'map', :locals => {:lat => 40.721632, :long => -73.985538, :zoom => 10} %>
+
+
+
+<script>
+
+<% @a.each do |x| %>
+    add_marker(<%= x.lat %>, <%= x.long %>, '<%= x.name %>');
+  <% end %>
+	
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
